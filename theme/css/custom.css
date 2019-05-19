@@ -727,9 +727,11 @@ div.output_area .rendered_html table {
     font-size: 2.5em;
     font-weight: 700;
     color: white;
+    text-shadow: 0px 0px 20px black;
 }
 .about-author-subtitle {
     font-weight: 700;
+    text-shadow: 0px 0px 20px black;
 }
 @-webkit-keyframes rounded{
     0% {
