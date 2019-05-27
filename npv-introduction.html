@@ -1,19 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codengineering</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-05-24T00:00:00-07:00</updated><subtitle>Engineering and Statistics Tutorials</subtitle><entry><title>What is Net Present Value(NPV)?</title><link href="/npv-introduction" rel="alternate"></link><published>2019-05-24T00:00:00-07:00</published><updated>2019-05-24T00:00:00-07:00</updated><author><name>MITCHEL BROTEN</name></author><id>tag:None,2019-05-24:/npv-introduction</id><summary type="html">&lt;p&gt;to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
-&lt;style type="text/css"&gt;/*!
-*
-* IPython notebook
-*
-*/
-/* CSS font colors for translated ANSI escape sequences */
-/* The color values are a mix of
-   http://www.xcolors.net/dl/baskerville-ivorylight and
-   http://www.xcolors.net/dl/euphrasia */
-.ansi-black-fg {
-  color: #3E424D;
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <meta name="google-site-verification" content="ZsWFnpirKDgtbmwb1YRymDnSfvnUrpzCbf6LD1F_4TY" />
+
+            <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />
+
+            <meta name="author" content="MITCHEL BROTEN" />
+
+
+            <meta name="description" content="        The basics of Net Present Value and why it&#39;s important.
+" />
+
+                <meta property="og:type" content="article" />
+            <meta name="twitter:card" content="summary"/>
+
+        <meta name="keywords" content="finance, Finance, "/>
+
+        <link rel="canonical" href="/npv-introduction">
+    <meta property="og:title" content="What is Net Present Value(NPV)? | Codengineering"/>
+    <meta property="og:url" content="/npv-introduction" />
+    <meta property="og:description" content="The basics of Net Present Value and why it&#39;s important." />
+    <meta property="og:site_name" content="Codengineering" />
+    <meta property="og:article:author" content="MITCHEL BROTEN" />
+        <meta property="og:article:published_time" content="2019-05-24T00:00:00-07:00" />
+    <meta name="twitter:title" content="What is Net Present Value(NPV)? | Codengineering">
+    <meta name="twitter:description" content="The basics of Net Present Value and why it&#39;s important.">
+        <meta property="og:image" content="/images/featured_images/variogram_basics.png" />
+        <meta name="twitter:image" content="/images/featured_images/variogram_basics.png" >
+
+
+        <title>    What is Net Present Value(NPV)?  | Codengineering
+</title>
+
+                <link rel="stylesheet" type="text/css" href="/theme/libs/bootstrap-4.2.1/dist/css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="/theme/libs/fontawesome-free-5.2.0-web/css/all.min.css">
+            <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="/theme/css/ipynb.css" media="screen">
+
+            <style>
+                #progressBar::-webkit-progress-value {
+                    background-color: #24292e;
+                }
+                #progressBar::-moz-progress-bar {
+                    background-color: #24292e;
+                }
+            </style>
+
+        <link href="/theme/libs/prism.css" rel="stylesheet" />
+<script type="text/x-mathjax-config">
+
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+  linebreaks: { automatic: true, width: "container" }
 }
-.ansi-black-bg …&lt;/style&gt;</summary><content type="html">&lt;p&gt;to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
-&lt;style type="text/css"&gt;/*!
+});
+
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+        <link rel="shortcut icon" href="/theme/img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/img/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/img/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/img/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/img/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/img/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/img/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/img/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Codengineering - Full Atom Feed" />
+    </head>
+    <body>
+<progress id="progressBar" max="19827" class="flat">
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+</progress>        <div class="banner-wrapper row" style="background-color: #24292e;">
+            <div class="banner">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light container">
+                    <div class="container navbar-title">
+                        <a href="/"><img id="banner-logo" src="/theme/img/logo_with_subtitle.svg" style="height: 40px; margin: 6px 0;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/post.html">Articles</a>
+                        </li>
+                        <li id="last-item" class="nav-item">
+                            <a class="nav-link rem_08" href="/archives.html">Archive</a>
+                        </li>
+                     </ul>
+                    <form id="search-form" class="form-inline my-2 my-lg-0 justify-content-center" action="/search.html">
+                        <div class="search-box-div" align="center">
+                            <input id="tipue_search_input" class="form-control mr-md-2 rem_08 col-9" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" aria-label="Search">
+                            <button id="search-btn" class="btn btn-search btn-outline-success btn-circle rem_08 col-3" type="submit" for="tipue_search_input">Search</button>
+                        </div>
+                    </form>
+                </div>
+                </nav>
+            </div>
+        </div>
+        <div id="wrap">
+<div id="post-container" class="container post index">
+    <article>
+        <header>
+            <h1>What is Net Present Value(NPV)?</h1>
+            <div class="row justify-content-between no-margin">
+                <h4 class="article-category">Category > <a class="article-category-link" href="/archives.html">Finance</a></h4>
+                <span class="article-date">May 24, 2019</span>
+            </div>
+            <div class="meta meta-tag no-margin no-border">
+                <div>
+                        <a href="/tag/finance.html" class="tag">finance</a>
+                </div>
+            </div>
+            <section>
+    <div class="row justify-content-end mt-3" style="align-items: center">
+        <div class="share-post-intro mr-2">Share This Post :</div>
+        <div class="social-share-btns-container">
+            <div class="social-share-btns">
+                <a class="share-btn share-btn-twitter" href="https://twitter.com/home?status=/npv-introduction" rel="nofollow" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="share-btn share-btn-facebook" href="http://www.facebook.com/sharer/sharer.php?u=/npv-introduction" rel="nofollow" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=/npv-introduction" rel="nofollow" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </header>
+        <div class="article_content">
+            
+            <p>to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.</p>
+<style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -375,7 +509,7 @@ div.unrecognized_cell .inner_cell a:hover {
   text-decoration: none;
 }
 @media (max-width: 540px) {
-  div.unrecognized_cell &gt; div.prompt {
+  div.unrecognized_cell > div.prompt {
     display: none;
   }
 }
@@ -428,19 +562,19 @@ div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
 }
-div.input_area &gt; div.highlight {
+div.input_area > div.highlight {
   margin: 0.4em;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-div.input_area &gt; div.highlight &gt; pre {
+div.input_area > div.highlight > pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+/* The following gets added to the <head> if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -501,7 +635,7 @@ div.input_area &gt; div.highlight &gt; pre {
 }
 /*
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 Adapted from GitHub theme
 
 */
@@ -745,7 +879,7 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
-div.output_area .mglyph &gt; img {
+div.output_area .mglyph > img {
   max-width: none;
 }
 /* This is needed to protect the pre formating from global settings such
@@ -983,7 +1117,7 @@ div.text_cell {
   align-items: stretch;
 }
 @media (max-width: 540px) {
-  div.text_cell &gt; div.prompt {
+  div.text_cell > div.prompt {
     display: none;
   }
 }
@@ -1055,8 +1189,8 @@ h6:hover .anchor-link {
   font-size: 100%;
   font-style: italic;
 }
-&lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -1124,8 +1258,8 @@ h6:hover .anchor-link {
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -1161,120 +1295,120 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="What-is-Net-Present-Value-(NPV)-and-why-does-it-matter?"&gt;What is Net Present Value (NPV) and why does it matter?&lt;a class="anchor-link" href="#What-is-Net-Present-Value-(NPV)-and-why-does-it-matter?"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Net present value (NPV) is a commonly used metric in finance and accounting to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Net-Present-Value"&gt;Net Present Value&lt;a class="anchor-link" href="#Net-Present-Value"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The benefit of using NPV to evaluate capital projects is that in takes into consideration the time value of money: a dollar today is worth more than a dollar tommorow. Net present value is defined by:&lt;/p&gt;
-&lt;div id="eq-1"&gt;$$ NPV = \sum_{i= 0}^n\frac{C_i}{(1 + r)^i}\\ \tag{1.1}$$&lt;/div&gt;
-&lt;div&gt;$\textbf{where:} \\ C_i = \text{The cash inflow/outflow for period } \textit{i} \\ r = \text{The discount rate} \\ i = \text{The number of periods} \\$&lt;/div&gt;&lt;p&gt;Another way of saying this is:&lt;/p&gt;
-&lt;div&gt;$$ \\ \\ NPV = \text{The sum of the present value of all future cash flows} - \text{The initial investment} \\$$ &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The present value of each cash flow is discounted by discount rate ($r$). This discount rate ($r$) is determined by the minumum return on investment desired. For a project to be considered economic using the NPV method, the NPV must be 0 or greater. Having an NPV of 0 does not mean that the project breaks even, it means that the project earns the minimum required rate of return. A positive NPV means that the project earns more than the required rate of return, or the required rate of return plus the dollar value of NPV. A negative NPV means that the project returns less that the minimun required rate of return, and therefore loses money.&lt;/p&gt;
-&lt;table class="jupyter-markdown-table" style="font-size: 2rem"&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th class="text-center"&gt;&lt;/th&gt;
-&lt;th class="text-center"&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody class="table-hover"&gt;
-&lt;tr&gt;
-&lt;td class="text-center"&gt;$NPV&lt;0$&lt;/td&gt;
-&lt;td class="text-center"&gt;Reject Project&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="text-center"&gt;$NPV=0$&lt;/td&gt;
-&lt;td class="text-center"&gt;Accept Project&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="text-center"&gt;$NPV&gt;0$&lt;/td&gt;
-&lt;td class="text-center"&gt;Accept Project&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="What-is-the-meaning-of-discount-rate?"&gt;What is the meaning of discount rate?&lt;a class="anchor-link" href="#What-is-the-meaning-of-discount-rate?"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;All cash flows are discounted by the discount rate, r, when used in the NPV formula. But what is the meaning of discount rate? The discount rate captures the concept of future dollars not being as valuable as present dollars. Therefore, to determine the present value of all future cash flows, each individual cash flow is devalued as a function of the time from present and the discount rate. For example. If you will recieve \$1,000 a year from now, and your discount rate is 10\% a year, discounted yearly, then its present value is \\$900, or \$1000 less 10\% of \\$1000. If the \$1000 you are receiving is not coming until 2 years from now, then you must discount it twice, the present value will now be \\$810.&lt;/p&gt;
-&lt;p&gt;How is this discount rate determined? The discount rate is determined by the minumum return on investment that the investor wants. This may be influenced by things such as how the company is being financed or how much the return on investment is on relatively safe projects. The lower you set your discount rate, the more projects will be economical because of the lower required rate of return on investment.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Let's-see-an-example-of-NPV"&gt;Let's see an example of NPV&lt;a class="anchor-link" href="#Let's-see-an-example-of-NPV"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Let's say that you have a project that costs \$100,000 to implement, but it will provide cash flows of 30,000 per year for 5 years. Your discount rate is 10\%. What is the net present value (NPV) of this project and should you implement it?&lt;/p&gt;
-&lt;div class="row give-margin-inline-plot" id="fig-1"&gt;
-&lt;div class="col-12"&gt;&lt;img src="jupyter_images/npv.png"&gt;&lt;/div&gt;
-&lt;div class="col-12"&gt;&lt;p class="image-description"&gt;Figure 1: assigning letter grades with standard deviation&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;a href="#fig-1"&gt;fig 1&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;First, lets identify the&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class="highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+</style>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-Net-Present-Value-(NPV)-and-why-does-it-matter?">What is Net Present Value (NPV) and why does it matter?<a class="anchor-link" href="#What-is-Net-Present-Value-(NPV)-and-why-does-it-matter?">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Net present value (NPV) is a commonly used metric in finance and accounting to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Net-Present-Value">Net Present Value<a class="anchor-link" href="#Net-Present-Value">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The benefit of using NPV to evaluate capital projects is that in takes into consideration the time value of money: a dollar today is worth more than a dollar tommorow. Net present value is defined by:</p>
+<div id="eq-1">$$ NPV = \sum_{i= 0}^n\frac{C_i}{(1 + r)^i}\\ \tag{1.1}$$</div>
+<div>$\textbf{where:} \\ C_i = \text{The cash inflow/outflow for period } \textit{i} \\ r = \text{The discount rate} \\ i = \text{The number of periods} \\$</div><p>Another way of saying this is:</p>
+<div>$$ \\ \\ NPV = \text{The sum of the present value of all future cash flows} - \text{The initial investment} \\$$ </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The present value of each cash flow is discounted by discount rate ($r$). This discount rate ($r$) is determined by the minumum return on investment desired. For a project to be considered economic using the NPV method, the NPV must be 0 or greater. Having an NPV of 0 does not mean that the project breaks even, it means that the project earns the minimum required rate of return. A positive NPV means that the project earns more than the required rate of return, or the required rate of return plus the dollar value of NPV. A negative NPV means that the project returns less that the minimun required rate of return, and therefore loses money.</p>
+<table class="jupyter-markdown-table" style="font-size: 2rem">
+<thead>
+<tr>
+<th class="text-center"></th>
+<th class="text-center"></th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<td class="text-center">$NPV<0$</td>
+<td class="text-center">Reject Project</td>
+</tr>
+<tr>
+<td class="text-center">$NPV=0$</td>
+<td class="text-center">Accept Project</td>
+</tr>
+<tr>
+<td class="text-center">$NPV>0$</td>
+<td class="text-center">Accept Project</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-the-meaning-of-discount-rate?">What is the meaning of discount rate?<a class="anchor-link" href="#What-is-the-meaning-of-discount-rate?">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>All cash flows are discounted by the discount rate, r, when used in the NPV formula. But what is the meaning of discount rate? The discount rate captures the concept of future dollars not being as valuable as present dollars. Therefore, to determine the present value of all future cash flows, each individual cash flow is devalued as a function of the time from present and the discount rate. For example. If you will recieve \$1,000 a year from now, and your discount rate is 10\% a year, discounted yearly, then its present value is \\$900, or \$1000 less 10\% of \\$1000. If the \$1000 you are receiving is not coming until 2 years from now, then you must discount it twice, the present value will now be \\$810.</p>
+<p>How is this discount rate determined? The discount rate is determined by the minumum return on investment that the investor wants. This may be influenced by things such as how the company is being financed or how much the return on investment is on relatively safe projects. The lower you set your discount rate, the more projects will be economical because of the lower required rate of return on investment.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-see-an-example-of-NPV">Let's see an example of NPV<a class="anchor-link" href="#Let's-see-an-example-of-NPV">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's say that you have a project that costs \$100,000 to implement, but it will provide cash flows of 30,000 per year for 5 years. Your discount rate is 10\%. What is the net present value (NPV) of this project and should you implement it?</p>
+<div class="row give-margin-inline-plot" id="fig-1">
+<div class="col-12"><img src="jupyter_images/npv.png"></div>
+<div class="col-12"><p class="image-description">Figure 1: assigning letter grades with standard deviation</p></div>
+</div><p><a href="#fig-1">fig 1</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First, lets identify the</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -1300,4 +1434,72 @@ h6:hover .anchor-link {
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="finance"></category></entry></feed>
+</script>
+        </div>
+        <hr/>
+        <hr/>
+    </article>
+</div>
+        </div>
+<footer class="footer">
+   <div class="container bottom_border">
+      <div class="row">
+         <div class="col">
+            <h5 class="headin5_amrc col_white_amrc pt2">ABOUT MITCHEL</h5>
+            <!--headin5_amrc-->
+            <p class="mb10"><img id="profile_img" align="left" src="/theme/img/me.jpg">Senior undergraduate student at the Univeristy of Texas at Austin, Hildebrand Department of Petroleum Engineering, the #1 petroleum engineering school in the US. I am interested in coding, statistics, and engineering.</p>
+            <p><i class="fa fa-envelope mr-2"></i>mitchelbroten@gmail.com</p>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+         <li><a href="/">HOME</a></li>
+         <li><a href="post.html">ARTICLES</a></li>
+         <li><a href="archives.html">ARCHIVE</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">Template Provided by <a href="https://aegis4048.github.io">Eric Kim</a> @2018</p>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="row" align="center">
+                  <div class="footer-icon"><a href="https://www.linkedin.com/in/mitchel-broten-6babb2128/"><i class="fab fa-linkedin-in"></i></a></div>
+                  <div class="footer-icon"><a href="https://github.com/mbroten15"><i class="fab fa-github"></i></a></div>
+              </div>
+          </div>
+      </div>
+
+      <!--social_footer_ul ends here-->
+   </div>
+</footer>
+            <script type="text/javascript" src="/theme/libs/jquery.min.js"></script>
+            <script type="text/javascript" src="/theme/libs/bootstrap-4.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="/theme/libs/prism.js"></script>
+        <script src="/theme/libs/Countable.js"></script>
+
+        <script>
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                'remove-trailing': true,
+                'remove-indent': true,
+                'left-trim': true,
+                'right-trim': true,
+                /*'break-lines': 80,
+                'indent': 2,
+                'remove-initial-line-feed': false,
+                'tabs-to-spaces': 4,
+                'spaces-to-tabs': 4*/
+            });
+        </script>
+
+
+        <script type="text/javascript" src="/theme/js/custom.js"></script>
+            <script>
+                function validateForm(query)
+                {
+                    return (query.length > 0);
+                }
+            </script>
+    </body>
+</html>
+

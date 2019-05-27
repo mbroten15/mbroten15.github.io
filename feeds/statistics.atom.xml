@@ -1217,10 +1217,10 @@ h6:hover .anchor-link {
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="f3090524-a19a-4067-99e1-9ac0585d8d99"&gt;&lt;/div&gt;
+&lt;div id="71e0a312-a651-4814-86a2-1eb8559145b8"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript"&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#f3090524-a19a-4067-99e1-9ac0585d8d99');
+var element = $('#71e0a312-a651-4814-86a2-1eb8559145b8');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
