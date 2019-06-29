@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codengineering - Finance</title><link href="https://mbroten15.github.io/" rel="alternate"></link><link href="https://mbroten15.github.io/feeds/finance.atom.xml" rel="self"></link><id>https://mbroten15.github.io/</id><updated>2019-05-24T00:00:00-07:00</updated><subtitle>Engineering and Statistics Tutorials</subtitle><entry><title>What is Net Present Value (NPV)</title><link href="https://mbroten15.github.io/npv-introduction" rel="alternate"></link><published>2019-05-24T00:00:00-07:00</published><updated>2019-05-24T00:00:00-07:00</updated><author><name>MITCHEL BROTEN</name></author><id>tag:mbroten15.github.io,2019-05-24:/npv-introduction</id><summary type="html">&lt;p&gt;to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codengineering - Finance</title><link href="https://mbroten15.github.io/" rel="alternate"></link><link href="https://mbroten15.github.io/feeds/finance.atom.xml" rel="self"></link><id>https://mbroten15.github.io/</id><updated>2019-05-24T00:00:00-07:00</updated><subtitle>Engineering and Statistics Tutorials</subtitle><entry><title>What is Net Present Value(NPV)?</title><link href="https://mbroten15.github.io/npv-introduction" rel="alternate"></link><published>2019-05-24T00:00:00-07:00</published><updated>2019-05-24T00:00:00-07:00</updated><author><name>MITCHEL BROTEN</name></author><id>tag:mbroten15.github.io,2019-05-24:/npv-introduction</id><summary type="html">&lt;p&gt;to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
 &lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
@@ -1165,13 +1165,6 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="What-is-Net-Present-Value-(NPV)-and-why-does-it-matter?"&gt;What is Net Present Value (NPV) and why does it matter?&lt;a class="anchor-link" href="#What-is-Net-Present-Value-(NPV)-and-why-does-it-matter?"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Net present value (NPV) is a commonly used metric in finance and accounting to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1207,15 +1200,15 @@ h6:hover .anchor-link {
 &lt;tbody class="table-hover"&gt;
 &lt;tr&gt;
 &lt;td class="text-center"&gt;$NPV&lt;0$&lt;/td&gt;
-&lt;td class="text-center"&gt;Reject Project&lt;/td&gt;
+&lt;td class="text-center"&gt;Project loses value, reject&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class="text-center"&gt;$NPV=0$&lt;/td&gt;
-&lt;td class="text-center"&gt;Accept Project&lt;/td&gt;
+&lt;td class="text-center"&gt;Project does not add value, reject&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class="text-center"&gt;$NPV&gt;0$&lt;/td&gt;
-&lt;td class="text-center"&gt;Accept Project&lt;/td&gt;
+&lt;td class="text-center"&gt;Project adds value, accept&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1248,7 +1241,9 @@ h6:hover .anchor-link {
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Let's say that you have a project that costs \$100,000 to implement, but it will provide cash flows of 30,000 per year for 5 years. Your discount rate is 10\%. What is the net present value (NPV) of this project and should you implement it?&lt;/p&gt;
-&lt;div class="row give-margin-inline-plot" id="fig-1"&gt;
+&lt;h3 id="Step-1:-Identify-all-cash-flows"&gt;Step 1: Identify all cash flows&lt;a class="anchor-link" href="#Step-1:-Identify-all-cash-flows"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As we can recall from &lt;a href="#eq-1"&gt;equation 1&lt;/a&gt;, NPV is a function of cash flows, discount rate, and periods (time). The first thing we must do is identify all cash flows. From the problem, there is a cash flow of 30,000 each year, and this project lasts 5 years, so for time periods 1-5 we have a postive cash flow of 30,000. We also have to consider that there is a cash flow at time 0, which is the initial investment cost of 100,000.&lt;/p&gt;
+&lt;h3 id="Step-2:-Evaluate-the-NPV-of-the-project"&gt;Step 2: Evaluate the NPV of the project&lt;a class="anchor-link" href="#Step-2:-Evaluate-the-NPV-of-the-project"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let's plug our cash flows into the &lt;a href="#eq-1"&gt;equation&lt;/a&gt; we defined earlier, using a discount rate of 10\%:&lt;/p&gt;
+&lt;div id="eq-2"&gt;$$ NPV = \sum_{i= 0}^n\frac{C_i}{(1 + r)^i} = \frac{-100,000}{(1 + 0.1)^0} + \frac{30,000}{(1 + 0.1)^1} + \frac{30,000}{(1 + 0.1)^2} + \frac{30,000}{(1 + 0.1)^3} + \frac{30,000}{(1 + 0.1)^4} + \frac{30,000}{(1 + 0.1)^5} \tag{2.1}$$&lt;/div&gt;&lt;div class="row give-margin-inline-plot" id="fig-1"&gt;
 &lt;div class="col-12"&gt;&lt;img src="jupyter_images/npv.png"&gt;&lt;/div&gt;
 &lt;div class="col-12"&gt;&lt;p class="image-description"&gt;Figure 1: assigning letter grades with standard deviation&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;a href="#fig-1"&gt;fig 1&lt;/a&gt;&lt;/p&gt;

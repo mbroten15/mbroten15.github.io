@@ -4,35 +4,35 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>/</loc>
-<lastmod>2019-05-27T14:51:26-00:00</lastmod>
+<loc>https://mbroten15.github.io/</loc>
+<lastmod>2019-06-28T20:05:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/archives.html</loc>
-<lastmod>2019-05-27T14:51:26-00:00</lastmod>
+<loc>https://mbroten15.github.io/archives.html</loc>
+<lastmod>2019-06-28T20:05:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/npv-introduction</loc>
+<loc>https://mbroten15.github.io/npv-introduction</loc>
 <lastmod>2019-05-24T00:00:00-07:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/finance.html</loc>
+<loc>https://mbroten15.github.io/category/finance.html</loc>
 <lastmod>2019-05-24T00:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/finance.html</loc>
+<loc>https://mbroten15.github.io/tag/finance.html</loc>
 <lastmod>2019-05-24T00:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
