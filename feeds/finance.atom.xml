@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codengineering - Finance</title><link href="https://mbroten15.github.io/" rel="alternate"></link><link href="https://mbroten15.github.io/feeds/finance.atom.xml" rel="self"></link><id>https://mbroten15.github.io/</id><updated>2019-05-24T00:00:00-07:00</updated><subtitle>Engineering and Statistics Tutorials</subtitle><entry><title>What is Net Present Value(NPV)?</title><link href="https://mbroten15.github.io/npv-introduction" rel="alternate"></link><published>2019-05-24T00:00:00-07:00</published><updated>2019-05-24T00:00:00-07:00</updated><author><name>MITCHEL BROTEN</name></author><id>tag:mbroten15.github.io,2019-05-24:/npv-introduction</id><summary type="html">&lt;p&gt;to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
-&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Stochastic Stories - Finance</title><link href="https://mbroten15.github.io/" rel="alternate"></link><link href="https://mbroten15.github.io/feeds/finance.atom.xml" rel="self"></link><id>https://mbroten15.github.io/</id><updated>2019-05-24T00:00:00-07:00</updated><subtitle>Business, Staticstics, and Engineering Tutorials</subtitle><entry><title>What is Net Present Value(NPV)?</title><link href="https://mbroten15.github.io/npv-introduction" rel="alternate"></link><published>2019-05-24T00:00:00-07:00</published><updated>2019-05-24T00:00:00-07:00</updated><author><name>MITCHEL BROTEN</name></author><id>tag:mbroten15.github.io,2019-05-24:/npv-introduction</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -12,8 +11,23 @@
 .ansi-black-fg {
   color: #3E424D;
 }
-.ansi-black-bg …&lt;/style&gt;</summary><content type="html">&lt;p&gt;to evaluate and compare anything that involves cash flow, such as loans, investments, and business projects.&lt;/p&gt;
-&lt;style type="text/css"&gt;/*!
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color …&lt;/style&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1189,7 +1203,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The present value of each cash flow is discounted by discount rate ($r$). This discount rate ($r$) is determined by the minumum return on investment desired. For a project to be considered economic using the NPV method, the NPV must be 0 or greater. Having an NPV of 0 does not mean that the project breaks even, it means that the project earns the minimum required rate of return. A positive NPV means that the project earns more than the required rate of return, or the required rate of return plus the dollar value of NPV. A negative NPV means that the project returns less that the minimun required rate of return, and therefore loses money.&lt;/p&gt;
+&lt;p&gt;The present value of each cash flow is discounted by discount rate ($r$). This discount rate ($r$) is determined by the minumum return on investment desired. For a project to be considered economic using the NPV method, the NPV must be 0 or greater. Having an NPV of 0 does not mean that the project breaks even, it means that the project earns the minimum required rate of return. A positive NPV means that the project earns more than the required rate of return, or the required rate of return plus the dollar value of NPV. A negative NPV means that the project returns less that the minimum required rate of return, and therefore loses value.&lt;/p&gt;
 &lt;table class="jupyter-markdown-table" style="font-size: 2rem"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1225,7 +1239,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;All cash flows are discounted by the discount rate, r, when used in the NPV formula. But what is the meaning of discount rate? The discount rate captures the concept of future dollars not being as valuable as present dollars. Therefore, to determine the present value of all future cash flows, each individual cash flow is devalued as a function of the time from present and the discount rate. For example. If you will recieve \$1,000 a year from now, and your discount rate is 10\% a year, discounted yearly, then its present value is \\$900, or \$1000 less 10\% of \\$1000. If the \$1000 you are receiving is not coming until 2 years from now, then you must discount it twice, the present value will now be \\$810.&lt;/p&gt;
+&lt;p&gt;All cash flows are discounted by the discount rate, r, when used in the NPV formula. But what is the meaning of discount rate? The discount rate captures the concept of future dollars not being as valuable as present dollars. Therefore, to determine the present value of all future cash flows, each individual cash flow is devalued as a function of the time from present and the discount rate. For example. If you will recieve &lt;span&gt;$&lt;span&gt;&lt;/span&gt;1,000 a year from now, and your discount rate is 10% a year, discounted yearly, then its present value is &lt;span&gt;$&lt;span&gt;&lt;/span&gt;900, or &lt;span&gt;$&lt;span&gt;&lt;/span&gt;1000 less 10% of &lt;span&gt;$&lt;span&gt;&lt;/span&gt;1000. If the &lt;span&gt;$&lt;span&gt;&lt;/span&gt;1000 you are receiving is not coming until 2 years from now, then you must discount it twice, the present value will now be &lt;span&gt;$&lt;span&gt;&lt;/span&gt;810.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;How is this discount rate determined? The discount rate is determined by the minumum return on investment that the investor wants. This may be influenced by things such as how the company is being financed or how much the return on investment is on relatively safe projects. The lower you set your discount rate, the more projects will be economical because of the lower required rate of return on investment.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1240,15 +1254,15 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Let's say that you own a factory that makes dog toys. You want to buy a new machine to manufacture toys that costs \$100,000 to implement, but it will provide cash flows of \\$30,000 per year for 5 years. Your discount rate is 10\%. What is the net present value (NPV) of this project and should you implement it?&lt;/p&gt;
-&lt;h3 id="Step-1:-Identify-all-cash-flows"&gt;Step 1: Identify all cash flows&lt;a class="anchor-link" href="#Step-1:-Identify-all-cash-flows"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As we can recall from &lt;a href="#eq-1"&gt;equation 1&lt;/a&gt;, NPV is a function of cash flows, discount rate, and periods (time). The first thing we must do is identify all cash flows. From the problem, there is a cash flow of \$30,000 each year, and this project lasts 5 years, so for time periods 1-5 we have a postive cash flow of \\$30,000. We also have to consider that there is a cash flow at time 0, which is the initial investment cost of \$100,000.&lt;/p&gt;
-&lt;h3 id="Step-2:-Evaluate-the-NPV-of-the-project"&gt;Step 2: Evaluate the NPV of the project&lt;a class="anchor-link" href="#Step-2:-Evaluate-the-NPV-of-the-project"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let's plug our cash flows into the &lt;a href="#eq-1"&gt;equation&lt;/a&gt; we defined earlier, using a discount rate of 10\%:&lt;/p&gt;
+&lt;p&gt;Let's say that you own a factory that makes dog toys. You want to buy a new machine to manufacture toys that costs &lt;span&gt;$&lt;span&gt;&lt;/span&gt;100,000 to implement, but it will provide cash flows of &lt;span&gt;$&lt;span&gt;&lt;/span&gt;30,000 per year for 5 years. Your discount rate is 10%. What is the net present value (NPV) of this project and should you implement it?&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id="Step-1:-Identify-all-cash-flows"&gt;Step 1: Identify all cash flows&lt;a class="anchor-link" href="#Step-1:-Identify-all-cash-flows"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As we can recall from &lt;a href="#eq-1"&gt;equation 1&lt;/a&gt;, NPV is a function of cash flows, discount rate, and periods (time). The first thing we must do is identify all cash flows. From the problem, there is a cash flow of &lt;span&gt;$&lt;span&gt;&lt;/span&gt;30,000 each year, and this project lasts 5 years, so for time periods 1-5 we have a postive cash flow of &lt;span&gt;$&lt;span&gt;&lt;/span&gt;30,000. We also have to consider that there is a cash flow at time 0, which is the initial investment cost of &lt;span&gt;$&lt;span&gt;&lt;/span&gt;100,000.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id="Step-2:-Evaluate-the-NPV-of-the-project"&gt;Step 2: Evaluate the NPV of the project&lt;a class="anchor-link" href="#Step-2:-Evaluate-the-NPV-of-the-project"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let's plug our cash flows into the &lt;a href="#eq-1"&gt;equation&lt;/a&gt; we defined earlier, using a discount rate of 10%:&lt;/p&gt;
 &lt;div id="eq-2"&gt;$$ NPV = \sum_{i= 0}^n\frac{C_i}{(1 + r)^i} = \frac{-100,000}{(1 + 0.1)^0} + \frac{30,000}{(1 + 0.1)^1} + \frac{30,000}{(1 + 0.1)^2} + \frac{30,000}{(1 + 0.1)^3} + \frac{30,000}{(1 + 0.1)^4} + \frac{30,000}{(1 + 0.1)^5} \tag{2.1}$$&lt;/div&gt;&lt;p&gt;From here, we can sum up the value of all cash inflow/outflows&lt;/p&gt;
-&lt;div id="eq-3"&gt;$$ NPV = \sum_{i= 0}^n\frac{C_i}{(1 + r)^i} = -$100,000 + $27,000 + $24,000 + $21,000 + $18,000 + $15,000 = $5,000 \tag{2.2}$$&lt;/div&gt;&lt;p&gt;Even though the cash inflow each year is \$30,000, due to the time value of money each cash flow is worth less in future dollars. This is why it's best to earn cash sooner rather than later!&lt;/p&gt;
+&lt;div id="eq-3"&gt;$$ NPV = \sum_{i= 0}^n\frac{C_i}{(1 + r)^i} = -$100,000 + $27,000 + $24,000 + $21,000 + $18,000 + $15,000 = $5,000 \tag{2.2}$$&lt;/div&gt;&lt;p&gt;Even though the cash inflow each year is &lt;span&gt;$&lt;span&gt;&lt;/span&gt;30,000, due to the time value of money each cash flow is worth less in future dollars. This is why it's best to earn cash sooner rather than later!&lt;/span&gt;&lt;/p&gt;
 &lt;div class="row give-margin-inline-plot" id="fig-1"&gt;
-&lt;div class="col-12"&gt;&lt;img src="jupyter_images/npv.png"&gt;&lt;/div&gt;
-&lt;div class="col-12"&gt;&lt;p class="image-description"&gt;Figure 1: $30,000 Cash inflow of project, discounted to present value &lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Our net present value for the project is 5,000, which means that this project returns the required 10 percent each year, plus an additional 5,000. According for our rules of evalating projects by net present value, we would accept this project. You're happy, and so are the dogs!&lt;/p&gt;
+&lt;div class="col-14"&gt;&lt;img src="jupyter_images/npv.png"&gt;&lt;/div&gt;
+&lt;div class="col-14"&gt;&lt;p class="image-description"&gt;Figure 1: $30,000 Yearly cash inflow of project, discounted to present value &lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Our net present value for the project is &lt;span&gt;$&lt;span&gt;&lt;/span&gt;5,000, which means that this project returns the required 10 percent each year, plus an additional &lt;span&gt;$&lt;span&gt;&lt;/span&gt;5,000. According for our rules of evalating projects by net present value, we would accept this project. You're happy, and so are the dogs!&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="#fig-1"&gt;fig 1&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1257,6 +1271,13 @@ h6:hover .anchor-link {
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Net Present Value, or NPV, is an effective way to evaulate captital projects. Because it makes sure you're considering that dollars earned in the future are less valuable than dollars earned now, NPV makes sure you know whether a project is worth your time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;span&gt;$&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
